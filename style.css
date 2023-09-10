@@ -1,0 +1,197 @@
+html{
+    overflow: hidden;
+}
+
+body{
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: fill;
+}
+
+@font-face{
+    font-family: electric;
+    src: url(./font/electric.otf);
+}
+
+@font-face{
+    font-family: neuro;
+    src: url(./font/neuro.otf);
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainTitle{
+    color: white;
+    font-size: 80px;
+    font-family: electric;
+
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+#author{
+    font-size: 25px;
+    color: white;
+    font-family: electric;
+}
+
+#mainBoard{
+    margin-top: 3%;
+    width: 600px;
+    height: 600px;
+    border: 5px solid;
+
+    --angle: 0deg;
+    border-image: conic-gradient(from var(--angle), purple, magenta, pink, blue, magenta, purple) 1;
+
+    animation: 4.5s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.styleAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.styleButtonsLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.styleButtonsRight{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.button{
+    border-radius: 25px;
+    transition: 0.1s ease-in-out;
+    padding: 20px;
+    font-family: neuro;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    transform: scale(1.1);
+}
+
+.eraseButton{
+    background-color: red;
+    font-size: 20px;
+    color: white;
+
+    transition: 0.2s ease-in-out;
+}
+
+.on{
+    background-color: #008000;
+}
+
+.off{
+    background-color: #850101;
+}
+
+.resetButton{
+    font-size: 20px;
+    background-color: #4b0082;
+    color: white;
+}
+
+#rainbowMode{
+    animation: rainbow-bg 2.5s linear;
+	animation-iteration-count: infinite;
+    color: black;
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+
+#colorPicker{
+    opacity: 0;
+    position: absolute;
+    padding: 70px;
+}
+
+.clrbtn{
+    padding: 70px;
+    border: 3px solid purple;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.showGrid{
+    background-color: purple;
+}
+
+a{
+    cursor: pointer;
+    color: inherit;
+}
