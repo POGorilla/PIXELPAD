@@ -1,8 +1,6 @@
 # PIXELPAD
 This website is based on the Etch-A-Sketch toy. The website is a simple pixel drawing page.
-
-# Simple Pixel Drawing Page
-Unleash your imagination with this Etch-A-Sketch-based drawing site!
+Unleash your imagination with this Etch-A-Sketch-based drawing site! Use the tools to draw unique pixel-art and show off your artist skills!
 
 # Credits
 Fonts - 1001fonts.com
