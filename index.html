@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXELPAD by POGorilla</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">;
+</head>
+<body>
+
+    <div class="title">
+        <div id="mainTitle">PixelPad</div>
+        <div id="author">By POGorilla :) 
+            <a href="https://github.com/POGorilla/PIXELPAD" target="_blank">SOURCE</a> <span>/</span>
+            <a href="https://github.com/pogorilla" target="_blank">GITHUB</a>
+        </div>
+    </div>
+
+    <div class="styleAll">
+            <div class="styleButtonsLeft">
+                <input type="color" id="colorPicker" class="chooseColor">
+                <button class="clrbtn"></button>
+                <button id="rainbowMode" class="button rainbow">Rainbow Mode</button>
+                <button class="eraseButton off button">Erase</button>
+                <button class="resetButton button">Reset</button>
+            </div>
+
+            <div id="mainBoard"></div>
+
+            <div class="styleButtonsRight">
+                <button class="showGrid button">Show Grid</button>
+                <button class="set16x16 button">16x16</button>
+                <button class="set32x32 button">32x32</button>
+                <button class="set64x64 button">64x64</button>
+                <button class="setCustomSize button">Custom Size</button>
+            </div>
+    </div>
+
+
+        <script src="./script-for-style.js"></script>
+        <script src="./script.js"></script>
+</body>
+</html>
