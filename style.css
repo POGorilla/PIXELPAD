@@ -197,6 +197,10 @@ body{
     transition: 0.2s ease-in-out;
 }
 
+.download{
+  background-color: yellowgreen;
+}
+
 .showGrid{
     background-color: purple;
 }
