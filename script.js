@@ -176,3 +176,16 @@ grabColor();
 eraserButton();
 startStopRainbow();
 showGridON();
+
+const downloadBtn = document.querySelector('.download');
+
+downloadBtn.addEventListener('click', () => {
+    html2canvas(document.querySelector('#mainBoard'))
+        .then(canvas => {
+            const url = canvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.setAttribute('download', 'PIXELPAD_art.png');
+            a.setAttribute('href', url);
+            a.click();
+        })
+})
