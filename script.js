@@ -10,16 +10,7 @@ let size = 8;
 let eraserON = false;
 let color = 'black';
 let toggleRainbow = false;
-let mouseDown = false;
 let showGridStatus = false;
-
-document.addEventListener('mousedown', () =>{
-    mouseDown = true;
-});
-
-document.addEventListener('mouseup', () => {
-    mouseDown = false;
-})
 
 createBoxes(size);
 
@@ -115,7 +106,7 @@ function drawColor()
         grabBox[j].addEventListener('mouseover', (event) => {
             event.stopPropagation(); 
             
-            if(mouseDown){
+            
                 if(eraserON == true){
                     grabBox[j].style.backgroundColor = 'white';
 
@@ -128,7 +119,7 @@ function drawColor()
                     } 
                     else
                         grabBox[j].style.backgroundColor = color;
-            }
+            
         })
     }
 }
